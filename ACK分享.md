@@ -1,4 +1,4 @@
-#### Linux ACK分享
+### ACK分享
 
 ![](http://www.geekfan.net/wp-content/uploads/499741e0670668777f7239bfa0b0e21e.jpg) 
 
@@ -14,7 +14,7 @@
 
 
 
-##### 1、简单介绍：
+#### 1、简单介绍：
 
 i. 它是高效代码搜索工具;
 
@@ -22,7 +22,7 @@ ii.它和 [`grep(强大的文本搜索工具)`](https://www.gnu.org/savannah-che
 
 iii.它纯粹的写在 [`Perl 5(脚本语言)`](http://www.perlchina.org/) 中,利用Perl的正则表达式的力量。
 
-##### 2、特点：
+#### 2、特点：
 
 ```
 速度非常快,因为它只搜索有意义的东西。
@@ -32,7 +32,7 @@ iii.它纯粹的写在 [`Perl 5(脚本语言)`](http://www.perlchina.org/) 中,�
 免费且开源
 ```
 
-##### 3、安装：
+#### 3、安装：
 
 if ( `brew` ) {
 
@@ -49,7 +49,7 @@ $ sudo mv /usr/bin/ack-grep /usr/bin/ack #更换名称
 
 }
 
-##### 4、参数说明：
+#### 4、参数说明：
 
 ```shell
 -i          忽略大小写
@@ -61,7 +61,7 @@ $ sudo mv /usr/bin/ack-grep /usr/bin/ack #更换名称
 -c          显示匹配的总行数
 ```
 
-##### 5、使用：
+#### 5、使用：
 
 **i.** 在当前目录递归搜索单词 **nh_photo_choice** , 不匹配类似于 **nh_photo_choiced** 或 **nh_photo_choices** 的字符串:
 
@@ -184,12 +184,3 @@ Note that some extensions may appear in multiple types.  For example,
     --[no]xml          .xml .dtd .xsl .xslt .ent; first line matches /<[?]xml/
     --[no]yaml         .yaml .yml
 ```
-
-
-
-
-
-
-
-
-
