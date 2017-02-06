@@ -1,4 +1,4 @@
-### macOS10.12下如何丝滑的使用appium?
+### appium1-macOS10.12下如何丝滑的使用appium?
 
 1、下载或者更新Homebrew：[homebrew官网](http://brew.sh/index_zh-cn.html) macOS 不可或缺的套件管理器
 
@@ -170,19 +170,43 @@ OK
 
 
 
+```shell
+# http://www.jianshu.com/p/3f43370437d2
+# xcodebuild -workspace workspacename -scheme schemename [-destination destinationspecifier][-destination-timeout value] [-configuration configurationname][-sdk [sdkfullpath | sdkname]] [buildaction ...] [setting=value ...][-userdefault=value ...]
+$ xcodebuild clean
+$ xcodebuild -workspace Fangduoduo.xcworkspace -sdk iphonesimulator -scheme Fangduoduo -configuration "Release"
+```
+
+
+
+
+
 对于真机，可能要麻烦些，安装 [appium-xcuitest-driver](https://github.com/appium/appium-xcuitest-driver) 驱动后，生成在真机上运行的包：
 
 参考资料可以看官网的说明 [部署ios-app-到手机上](http://appium.io/slate/cn/master/?ruby#部署ios-app-到手机上)  
 
 ```shell
-# 在 apps/HHH/build/Release-iphoneos/HHH.app 得到 release 包
-$ xcodebuild -sdk iphoneos -target HHH -configuration Release CODE_SIGN_IDENTITY="iPhone Distribution: Shenzhen XXXX Technology Co., Ltd. (B9FH944VTE)" 
+# 在 /Users/denglibing/Desktop/build/Release-iphoneos/HHH.app 得到 release 包
+$ xcodebuild clean
+$ xcodebuild -sdk iphoneos -target HHH -configuration Release -derivedDataPath "/Users/denglibing/Desktop/build" CODE_SIGN_IDENTITY="iPhone Distribution: Shenzhen XXXX Technology Co., Ltd. (B9FH944VTE)" 
 PROVISIONING_PROFILE="08f04032-ca2e-4bb5-b1ba-c32778115f2e"
 ```
 
 关于怎么设置 `CODE_SIGN_IDENTITY` 和 `PROVISIONING_PROFILE` 如何查看 ，可以选择下图所示的 `Development Team` 一行, `control+c` 然后 复制出去即可
 
 ![](http://7xqhx8.com1.z0.glb.clouddn.com/2BC50FE7-1D4D-40CC-9B2C-75D53A5B9F67.png) 
+
+也可以：
+
+```python
+CODE_SIGN_IDENTITY 为开发者证书标识，可以在 钥匙串访问 ->证书 -> 选中证书右键弹出菜单 -> 显示简介 -> 常用名称 获取，类似 iPhone Distribution: Company name Co. Ltd (xxxxxxxx9A), 包括括号内的内容。
+
+PROVISIONING_PROFILE: 这个是 mobileprovision 文件的 identifier，获取方式：
+
+Xcode -> Preferences -> 选中申请开发者证书的 Apple ID -> 选中开发者证书 -> View Details… -> 根据 Provisioning Profiles 的名字选中打包所需的 mobileprovision 文件 -> 右键菜单 -> Show in Finder -> 找到该文件后，除了该文件后缀名的字符串就是 PROVISIONING_PROFILE 字段的内容。
+```
+
+
 
 接下来连上真机 执行测试用例代码：
 
