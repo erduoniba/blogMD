@@ -4,6 +4,10 @@
 
 [CocoaPods官网](https://cocoapods.org/)  
 
+[podspec文件](https://guides.cocoapods.org/syntax/podspec.html)
+
+[podfile文件](https://guides.cocoapods.org/syntax/podfile.html) 
+
 #### 1、pod使用官网的仓库的关联代码（这些代码需要cocoapods审核通过才能被其他人使用，而且每次稳定的代码版本需要打上tag方便使用者选择对应的tag代码）
 
 上传至cocoapods的公开的 [仓库](https://github.com/CocoaPods/Specs.git) 使用 `pod setup` 或者 `pod install` 时会从仓库中下载到本地，存放在电脑的 `.cocoapods/repo/master` 中，这个仓库是cocoapods团队维护，大部分开源代码都放在这里，当然本地放的只是项目的一些相关信息：
@@ -236,3 +240,40 @@ https://github.com/ashleymills/Reachability.swift/issues/146
 同时在对应的 FDDUITableViewDemoSwift.podspec 目录下也添加 .swift-version 文件
 ```
 
+
+
+
+
+### pod_target_xcconfig [multi-platform](https://guides.cocoapods.org/syntax/podspec.html#tab_group_multi_platform_support)
+
+Any flag to add to the final **private** pod target xcconfig file. 任何标记添加到最后一个私人目标xcconfig文件仓。
+
+### Examples:
+
+```
+spec.pod_target_xcconfig = { 'OTHER_LDFLAGS' => '-lObjC' }
+```
+
+
+
+
+
+### user_target_xcconfig[multi-platform](https://guides.cocoapods.org/syntax/podspec.html#tab_group_multi_platform_support)
+
+Specifies flags to add to the final aggregate target xcconfig file, which propagates to non-overridden and inheriting build settings to the integrated user targets.
+
+------
+
+This attribute is **not recommended** as Pods should not pollute the build settings of the user project and this can cause conflicts.
+
+Multiple definitions for build settings that take multiple values will be merged. The user is warned on conflicting definitions for custom build settings and build settings that take only one value.
+
+Typically clang compiler flags or precompiler macro definitions go in here if they are required when importing the pod in the user target. Note that, this influences not only the compiler view of the public interface of your pod, but also all other integrated pods alongside to yours. You should always prefer [`pod_target_xcconfig`](http://guides.cocoapods.org/syntax/podspec.html#pod_target_xcconfig), which can contain the same settings, but only influence the toolchain when compiling your pod target.
+
+### Examples:
+
+> 
+
+```
+spec.user_target_xcconfig = { 'MY_SUBSPEC' => 'YES' }
+```
