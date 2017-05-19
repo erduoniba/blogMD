@@ -131,5 +131,3 @@ SWIFT_CLASS("_TtC9HDTestPod16SwiftSubClassPod")
 
 
 
-
-
