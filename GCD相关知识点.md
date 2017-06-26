@@ -6,6 +6,8 @@
 
 [GCD 深入理解：第一部分](https://github.com/nixzhu/dev-blog/blob/master/2014-04-19-grand-central-dispatch-in-depth-part-1.md) 
 
+[GCD 深入理解：第二部分](https://github.com/nixzhu/dev-blog/blob/master/2014-05-14-grand-central-dispatch-in-depth-part-2.md) 
+
 #### 1、 GCD（Grand Centra Dispatch）中队列分类：串行与并行 
 
 在使用GCD的时候，我们会把需要处理的任务放到Block中，然后将任务追加到相应的队列里面，这个队列，叫做Dispatch Queue。然而，存在于两种Dispatch Queue，一种是要等待上一个执行完，再执行下一个的Serial Dispatch Queue，这叫做串行队列；另一种，则是不需要上一个执行完，就能执行下一个的Concurrent Dispatch Queue，叫做并行队列，并行队列能开多少个线程由系统决定。这两种，均遵循FIFO原则 （并行队列中，执行顺序遵循FIFO原则，但是结果不确定）。

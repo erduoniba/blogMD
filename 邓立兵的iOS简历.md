@@ -1,26 +1,15 @@
 ### 个人信息
 
 - 邓立兵/男/1991
-
 - 本科/湖南科技学院-数学系-信息与计算科学专业/2013年毕业
-
-- 工作年限：5年
-
+- 工作年限：4年
 - 技术博客：http://blog.csdn.net/u012390519
-
 - Github：[github.com/erduoniba](https://github.com/erduoniba)
-
 - 期望职位：iOS开发工程师
-
 - 期望薪资：保密
-
 - 期望城市：深圳
-
 - 手机号码：13049862397 
-
 - 邮箱地址：13049862397@163.com
-
-  ​
 
 ### 工作经历
 
@@ -63,11 +52,9 @@
 
 ```
 1、Swift和Objective-C混编项目；
-2、UITableView如何开启极简模式：使用公共组件提升开发效率http://blog.csdn.net/u012390519/article/details/55260280；
+2、UITableView如何开启极简模式：使用公共组件提升开发效率；
 3、负责项目的IM模块，使用LeanCloud实现。
 ```
-
-
 
 **2013/11至2014/09**
 
@@ -100,33 +87,21 @@
 ```
 1、iOS团队开发master，负责对IM开发核心socket进行Objective-C封装，方便其他开发调用；
 2、负责对IM聊天界面开发，语音图片快捷发送的支持；
-3、使用CoreData对IM聊天的数据持久化开发。
 ```
-
-
 
 ### 技能特长
 
 ```
 1、多线程编程GCD(Grand Central Dispatch), NSTread;
-2、JS和IOS交互及相关第三方框架kerkee的理解;
+2、JS和IOS交互及;
 3、加/解密 和 加/解签, md5加密处理;
-4、项目多语言支持;
-5、银联支付等第三方支付的接入; 
-6、CoreData、Plist、NSUserDefault、文件保存等多种数据存储; 
-7、动画效果的掌握使得界面更加流畅; 
-8、蓝牙通讯和网络编程;
-9、视频项目开发; 
-10、熟练使用很多优秀的第三方库,如网络图片处理的EGOImageView和SDWebImageView,网络数据请求的ASIHttpRequest 和AFNetworking,网络数据解析的JsonKit,数据模型的建立Mantle,网络数据加载中的MBProgressHUD,提高项目开发进度; 熟练掌握友盟统计和微博微信分享,使得项目更加互动化。
-11、熟练掌握UI界面手写或者storyboard; 
-12、熟悉iOS应用程序发布流程; 
-13、熟悉版本控制GIT的使用及子项目管理;
-14、了解CocoaPods原理,管理属于自己的pod；
-15、Appium自动化测试的使用；
-16、使用Swift进行编程。
+4、熟练使用很多优秀的第三方库,如网络图片处理的SDWebImageView,网络数据请求的ASIHttpRequest 和AFNetworking,数据模型的建立Mantle,网络数据加载中的MBProgressHUD,提高项目开发进度; 熟练掌握友盟统计和微博微信分享,使得项目更加互动化。
+5、熟练掌握UI界面手写或者storyboard; 
+6、熟悉iOS应用程序发布流程; 
+7、熟悉版本控制GIT的使用及子项目管理;
+8、了解CocoaPods原理,管理属于自己的pod；
+9、Appium自动化测试的使用；
 ```
-
-
 
 ### 个人能力
 
@@ -138,8 +113,6 @@
 5、严于律己，宽厚待人。
 ```
 
-
-
 ### 个人作品
 
 博客：
@@ -150,13 +123,7 @@
 
 [JS和OC相互调用](http://blog.csdn.net/u012390519/article/details/50144049)
 
-[仿照微信首页下拉拍照的demo](http://blog.csdn.net/u012390519/article/details/50350694)
-
 [git submodule 管理子工程](http://blog.csdn.net/u012390519/article/details/51356714)
-
-[Rollout学习2 JS和OC代码对照篇](http://blog.csdn.net/u012390519/article/details/51444190)
-
-[kerkee 之Web和iOS开发使用篇](http://blog.csdn.net/u012390519/article/details/51702233)
 
 [UITableView如何开启极简模式](http://blog.csdn.net/u012390519/article/details/55260280) 
 
