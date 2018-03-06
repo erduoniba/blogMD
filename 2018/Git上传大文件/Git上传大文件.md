@@ -10,7 +10,7 @@ title: Git上传大文件
 
 ### 解决方案
 
-#### **1、将单个文件大于100M的文件不入库**
+#### <span id="1">1、将单个文件大于100M的文件不入库</span>
 
 [GitHub官方解决方案](https://help.github.com/enterprise/11.10.340/user/articles/working-with-large-files/) 
 
@@ -127,6 +127,8 @@ error: failed to push some refs to 'git@git.oschina.net:harrydeng/xxx.git'
 git config lfs.https://git.oschina.net/harrydeng/xxx.git/info/lfs.locksverify false
 ```
 
+
+
 **2、batch request: Access denied**
 
 ```shell
@@ -147,7 +149,30 @@ error: failed to push some refs to 'git@git.oschina.net:harrydeng/xxx.git'
 That looks like a server issue with deploy keys. For now, try removing .git/hooks/pre-push.
 ```
 
-**3、GitHub 目前 Git LFS的总存储量为1G左右，超过需要付费。**
+
+
+**3、GitHub 目前 Git LFS的总存储量为1G左右，超过需要付费。**(上传失败时，可以开启VPN进行上传)
+
+
+
+**4、batch response: Repository or object not found**
+
+```shell
+$ git lfs push origin master
+Git LFS: (0 of 1 files) 0 B / 207.25 MB                                                                                                    
+batch response: Repository or object not found: https://gitee.com/harrydeng/LargeFileStorage.git/info/lfs/objects/batch
+Check that it exists and that you have proper access to it
+```
+
+失败原因：
+
+```
+是gitee.com这个git仓库并不支持lfs，所以在大文件入库的时候，提示失败
+```
+
+[解决方式](#1)
+
+目前来说，GitHub、GitLab、Coding。gitee(也就是git.oschina.net)目前还不支持。
 
 
 
