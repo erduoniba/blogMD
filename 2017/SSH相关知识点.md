@@ -7,6 +7,10 @@
 ```shell
 git config --global user.name "denglibing"
 git config --global user.email "denglibing@fangdd.com"
+
+# 查看当前git用户及email
+git config user.name
+git config user.email
 ```
 
 2、查看并生成 `SSH` 密钥：
@@ -74,6 +78,19 @@ Welcome to Git@OSC, 邓立兵!
 ```shell
 ssh-add ~/.ssh/oschina_denglibing
 ```
+
+
+
+2、https方式提交代码，提示：
+
+```shell
+remote: Permission to erduoniba/LargeFileStorage.git denied to midea-smart.
+fatal: unable to access 'https://github.com/erduoniba/LargeFileStorage.git/': The requested URL returned error: 403
+```
+
+解决步骤哦依次如下：打开Finder ----> 应用程序 ---->实用工具 ---->钥匙串访问 ---->双击，即可进入到钥匙串访问记录保存页面，选择github.com名称的应用，右键删除即可。
+
+最后，再次push代码，会提示重新输入用户名及密码，输入github账号及密码即可。
 
 
 

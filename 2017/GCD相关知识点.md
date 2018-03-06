@@ -326,7 +326,7 @@ dispatch_apply 表现得就像一个 for 循环，但它能并发地执行不同
 ##### 3.6 dispatch_semaphore_t （信号量）
 
 ```objective-c
-dispatch_semaphore是GCD基于计数器的一种多线程同步机制,解决因为多线程的特性而引发数据出错的问题，与他相关的共有三个函数，分别是
+dispatch_semaphore是GCD基于计数器的一种多线程同步机制,异步变成同步,解决因为多线程的特性而引发数据出错的问题，与他相关的共有三个函数，分别是
 dispatch_semaphore_create，dispatch_semaphore_signal，dispatch_semaphore_wait。
   
 dispatch_semaphore_t semaphore = dispatch_semaphore_create(0); //创建一个信号量。参数指定信号量的起始值。这个数字是你可以访问的信号量，不需要有人先去增加它的数量。（注意到增加信号量也被叫做发射信号量）。译者注：这里初始化为0，也就是说，有人想使用信号量必然会被阻塞，直到有人增加信号量。这里的传入的参数value必须大于或等于0，否则dispatch_semaphore_create会返回NULL

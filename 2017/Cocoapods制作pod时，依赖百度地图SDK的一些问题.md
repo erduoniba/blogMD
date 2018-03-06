@@ -383,3 +383,5 @@ HDFramework2如何嵌入HDFramework3：
 ruby库xcodeproj使用心得
 
 [http://www.jianshu.com/p/cca701e1d87c](http://www.jianshu.com/p/cca701e1d87c)
+
+https://github.com/CocoaPods/CocoaPods/issues/2926
