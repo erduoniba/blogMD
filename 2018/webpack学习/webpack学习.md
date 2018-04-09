@@ -177,7 +177,7 @@ Entrypoint main = bundle.js
 
 #### 5、使用浏览器打开 `index.html` 看效果：
 
-![](/Users/denglibing/denglibing/HarryProject/blogMD/2018/webpack学习/webpack_demo1.jpeg)
+![](./webpack_demo1.jpeg)
 
 
 
