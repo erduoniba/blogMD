@@ -45,7 +45,7 @@ git push
 
 #### **2、突破GitHub的限制，使用 [git-lfs(Git Large File Storage)](https://git-lfs.github.com) 支持单个文件超过100M**
 
-![](./Git-lfs.gif) 
+![](https://github.com/erduoniba/blogMD/raw/master/2018/Git%E4%B8%8A%E4%BC%A0%E5%A4%A7%E6%96%87%E4%BB%B6/Git-lfs.gif) 
 
 > LFS 并不能像"变魔术一样"处理所有的大型数据：它需要记录并保存每一个变化。然而，这就把负担转移给了远程服务器 - 允许本地仓库保持相对的精简。
 >
