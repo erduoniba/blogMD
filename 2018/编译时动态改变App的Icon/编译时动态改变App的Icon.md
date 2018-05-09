@@ -39,11 +39,11 @@ echo "============================================================"
 
 2、打开项目工程，在 `Build Phases` 添加 `Run Script` ，并输入 `"${SRCROOT}/iconChange.sh"` ：
 
-![添加脚本](/Users/denglibing/denglibing/HarryProject/iOSProject/ChangeIconDemo/addShellFile.jpeg) 
+![添加脚本](./addShellFile.jpeg) 
 
 3、App需要的全套尺寸的Icon图片处理，这个脚本时针对的项目是使用 `Assets.xcassets` 中的 `AppIcon.appiconset` 有效。不同 bundleIdentifier 对应的全套尺寸的Icon图片，需要放在 `AppIcon.appiconset` 中，当然也可以修改脚本自定义路径。图片解释最清晰:
 
-![](/Users/denglibing/denglibing/HarryProject/iOSProject/ChangeIconDemo/appIcons.jpeg) 
+![](./appIcons.jpeg) 
 
 4、测试：修改项目的 bundleIdentifier 为 `com.msmart.meiju.inhouse` ，编译，App的Icon使用的是上图的 `inhouse` 文件夹中的图片集合；
 
