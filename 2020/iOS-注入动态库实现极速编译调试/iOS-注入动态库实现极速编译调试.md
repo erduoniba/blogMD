@@ -72,11 +72,16 @@
 
 ![injection_app2.jpg](./injection_app2.jpg) 
 
-Injection有多个颜色icon标示：
+InjectionIII有多个颜色icon标示：
 
-蓝色：已经启动 Injection App
+**蓝色**：已经启动 InjectionIII App
 
-橙色：目前项目已经对Injection初始化成功，同时会在项目中的Xcode控制台打印
+**黄色**：InjectionIII App 出错
+
+**绿色**：InjectionIII App 繁忙
+
+**橙色**：目前项目已经对Injection初始化成功，同时会在项目中的Xcode控制台打印
+
 
 **💉 Injection connected 👍**
 
@@ -110,7 +115,7 @@ Injection有多个颜色icon标示：
 
 
 
-**4、存在的一些问题：**
+**4、问题：**
 
 - [x]  没有使用 `Cocoapods`  、`iBiu` 的项目注入 InjectionIII
 
@@ -197,7 +202,8 @@ Injection有多个颜色icon标示：
   └── post_build.sh
   ```
 
-  ![injection_use1.jpg](iOS-注入动态库实现极速编译调试.assets/injection_use1.jpg)
+
+  ![injection_use1](./injection_use1.jpg) 
 
 
 
@@ -205,12 +211,24 @@ Injection有多个颜色icon标示：
 
 ### 原理篇
 
+![injected](./injected.png) 
 
 
-[iOS -> Socket自搭服务器通信](https://www.jianshu.com/p/d34d5c38f183)
+![injected_progress](./injected_progress.png) 
+
+
+
+
+
+参考链接
+
+[InjectionIII源码](https://github.com/johnno1962/InjectionIII)
+
+[Injection：iOS热重载背后的黑魔法](https://juejin.im/entry/5b1f4c5f5188257d7c35e9d9)
 
 [iOS InjectionIII工具的使用及重载原理](https://www.jianshu.com/p/0489c654657d)
 
 [Changes made in development pod not recognized by file watcher and not injected](https://github.com/johnno1962/InjectionIII/issues/34)
 
- 
+[iOS -> Socket自搭服务器通信](https://www.jianshu.com/p/d34d5c38f183)
+
